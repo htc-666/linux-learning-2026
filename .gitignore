@@ -1,0 +1,22 @@
+# 编译产物(没有扩展名的可执行文件)
+ch03/01_hole_demo
+ch03/02_append_demo
+ch03/03_my_redirect
+ch03/04_pread_demo
+ch03/05_*
+week1/ex2_*
+week1/mini*
+week1/hello_*
+
+# 通用模式:任何 .c 文件对应的同名无后缀二进制
+*.out
+a.out
+
+# 测试产生的文件
+**/test_file
+**/src_file
+**/dest_file
+**/hole_file
+**/out.txt
+**/new_file
+**/*.log
