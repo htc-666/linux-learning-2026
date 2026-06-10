@@ -20,3 +20,17 @@ a.out
 **/out.txt
 **/new_file
 **/*.log
+
+# ch04 二进制
+ch04/01_buffer_demo
+
+# ch06 二进制
+ch06/argv_demo
+
+# ch08 二进制
+ch08/01_catch_sigint
+ch08/02_alarm_demo
+ch08/03_block_signal
+ch08/04_sigsuspend
+ch08/05_realtime_signal
+ch08/06_abort_test
