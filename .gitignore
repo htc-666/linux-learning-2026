@@ -41,3 +41,6 @@ ch09/01_fork_basic
 ch09/02_fork_var
 ch09/03_fork_fd
 ch09/a.out
+ch09/04_zombie
+ch09/06_sigchld
+ch09/07_fork_exec
