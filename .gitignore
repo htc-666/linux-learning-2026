@@ -44,3 +44,23 @@ ch09/a.out
 ch09/04_zombie
 ch09/06_sigchld
 ch09/07_fork_exec
+
+# 先看看 .gitignore 已经有啥(可能之前就建过)
+cat .gitignore 2>/dev/null
+
+# 追加规则:忽略所有 chNN 目录下没扩展名的可执行文件
+cat >> .gitignore << 'EOF'
+
+# 忽略所有章节目录下编译生成的可执行文件
+ch*/[!.]*
+!ch*/*.c
+!ch*/*.h
+!ch*/Makefile
+EOF
+
+# 让 .gitignore 也跟着提交
+git add .gitignore
+git commit -m "gitignore: 忽略chNN下的编译产物"
+
+# 再看 git status,应该干净了
+git status
