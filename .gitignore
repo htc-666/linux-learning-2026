@@ -8,7 +8,7 @@ week1/ex2_*
 week1/mini*
 week1/hello_*
 
-# 通用模式:任何 .c 文件对应的同名无后缀二进制
+# 通用模式
 *.out
 a.out
 
@@ -21,46 +21,25 @@ a.out
 **/new_file
 **/*.log
 
-# ch04 二进制
+# 各章节编译产物(显式列出,保留历史)
 ch04/01_buffer_demo
-
-# ch06 二进制
 ch06/argv_demo
-
-# ch08 二进制
 ch08/01_catch_sigint
 ch08/02_alarm_demo
 ch08/03_block_signal
 ch08/04_sigsuspend
 ch08/05_realtime_signal
 ch08/06_abort_test
-
-
-# ch09 二进制
 ch09/01_fork_basic
 ch09/02_fork_var
 ch09/03_fork_fd
-ch09/a.out
 ch09/04_zombie
 ch09/06_sigchld
 ch09/07_fork_exec
+ch09/a.out
 
-# 先看看 .gitignore 已经有啥(可能之前就建过)
-cat .gitignore 2>/dev/null
-
-# 追加规则:忽略所有 chNN 目录下没扩展名的可执行文件
-cat >> .gitignore << 'EOF'
-
-# 忽略所有章节目录下编译生成的可执行文件
+# 通用兜底:忽略所有 chNN/ 下没扩展名的可执行文件,但保留源码
 ch*/[!.]*
 !ch*/*.c
 !ch*/*.h
 !ch*/Makefile
-EOF
-
-# 让 .gitignore 也跟着提交
-git add .gitignore
-git commit -m "gitignore: 忽略chNN下的编译产物"
-
-# 再看 git status,应该干净了
-git status
